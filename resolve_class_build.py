@@ -64,10 +64,10 @@ class R():
 
 	def SetCurrentFolder(self, folder):
 		"""returns Bool"""
-		self.folder  = self.mp.GetRootFolder()
-		cfolder = self.mp.GetCurrentFolder()
-		if cfolder != folder:
-			return self.mp.SetCurrentFolder(cfolder)
+		# self.folder  = self.mp.GetRootFolder()
+		# cfolder = self.mp.GetCurrentFolder()
+		# if cfolder != folder:
+		# 	return self.mp.SetCurrentFolder(cfolder)
 		return self.mp.SetCurrentFolder(folder)
 
 
@@ -275,8 +275,13 @@ R = R()		#instantiate the Class
 # R.DisplayProjectInfo(R.proj)
 # R.DisplayProjectTree(R.resolve)
 
-# R.SwitchPage(3)
+# R.SwitchPage(2)
 # R.SelectTimeline(1)
+
+
+print(R.GetCurrentFolder().GetName())
+print(R.GetRootFolder().GetSubFolders()[1].GetName())
+R.SetCurrentFolder(R.GetRootFolder())
 
 
 
